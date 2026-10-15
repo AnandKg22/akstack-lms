@@ -122,7 +122,7 @@ export function LessonViewer({
               {/* Formula Demonstration Block */}
               <div className="p-4 rounded-xl bg-zinc-900/60 border border-zinc-800 flex items-center justify-between">
                 <span className="font-mono text-sm text-emerald-400">
-                  $$\text{System Leverage} = \frac{\Delta \text{Throughput}}{\Delta \text{Latency}}$$
+                  {"$$\\text{System Leverage} = \\frac{\\Delta \\text{Throughput}}{\\Delta \\text{Latency}}$$"}
                 </span>
                 <span className="text-[10px] text-zinc-500 uppercase tracking-widest font-mono">
                   KaTeX Formula

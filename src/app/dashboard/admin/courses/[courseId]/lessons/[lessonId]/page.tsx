@@ -135,7 +135,7 @@ export default function AdminLessonEditorPage({ params }: LessonEditorProps) {
             <div className="space-y-4">
               <h1 className="text-2xl font-bold text-white border-b border-zinc-800 pb-2">{title}</h1>
               <div className="p-4 rounded bg-zinc-900 border border-zinc-800 font-mono text-xs text-emerald-400">
-                Formula Preview: $$\text{Availability} = \frac{\text{MTTF}}{\text{MTTF} + \text{MTTR}}$$
+                {"Formula Preview: $$\\text{Availability} = \\frac{\\text{MTTF}}{\\text{MTTF} + \\text{MTTR}}$$"}
               </div>
               <pre className="p-4 rounded-lg bg-zinc-900 border border-zinc-800 text-xs font-mono text-zinc-300 overflow-x-auto">
                 <code>{`// Compiled syntax preview:\nexport const ready = true;`}</code>
