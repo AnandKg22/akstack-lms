@@ -30,9 +30,9 @@ async function verifyAdminAuth(userId?: string) {
 }
 
 // -----------------------------------------------------------------------------
-// Zod Schemas
+// Zod Schemas (Internal)
 // -----------------------------------------------------------------------------
-export const CourseSchema = z.object({
+const CourseSchema = z.object({
   title: z.string().min(3, "Title must be at least 3 characters"),
   slug: z.string().min(3).regex(/^[a-z0-9-]+$/, "Slug must be lowercase alphanumeric with hyphens"),
   description: z.string().optional().nullable(),
@@ -43,14 +43,14 @@ export const CourseSchema = z.object({
   community_id: z.string().uuid().optional().nullable(),
 });
 
-export const ModuleSchema = z.object({
+const ModuleSchema = z.object({
   course_id: z.string().uuid(),
   title: z.string().min(2, "Module title required"),
   description: z.string().optional().nullable(),
   order_index: z.number().int().min(1),
 });
 
-export const LessonSchema = z.object({
+const LessonSchema = z.object({
   module_id: z.string().uuid(),
   title: z.string().min(2, "Lesson title required"),
   slug: z.string().min(2).regex(/^[a-z0-9-]+$/),
