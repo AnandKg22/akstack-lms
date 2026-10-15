@@ -3,15 +3,19 @@
 **Project:** AKStack Multi-Course Learning Management System  
 **Slug:** `akstack-lms` (Database Namespace: `app_akstack_lms_*`)  
 **Created:** 2026-10-15  
-**Status:** READY FOR PRODUCTION DEPLOYMENT  
+**Status:** DATABASE MIGRATED & SEEDED LIVE ON VPS — Ready for Dokploy Container Launch  
 **Dokploy Project:** `Agent-Supabase` (`rQWi4G7mifTX_cwpLbWTk`)  
 **Dokploy Environment:** `production` (`awOmNSOg-Crp27dEU8gm6`)  
 **Production URL:** [https://lms.akstack.com](https://lms.akstack.com)  
+**GitHub Repository:** `https://github.com/AnandKg22/akstack-lms.git`  
 **Central Supabase Instance:** `https://supabase-supabase-8fc5f7-185-205-244-119.sslip.io`  
-**Database Isolation Prefix:** `app_akstack_lms_*` (5 isolated tables)  
+**Database Isolation Prefix:** `app_akstack_lms_*` (5 isolated tables verified)  
+**Live DB Telemetry:** 1 course, 9 modules, 84 lessons active in `public.app_akstack_lms_*`  
 **Global Super Admin:** `admin@akstack.com` (`#Akaash22#`)  
-**Verified Health Endpoint:**
-- `GET https://lms.akstack.com/api/health` -> HTTP 200 OK (`service: "akstack-lms"`, `database: "connected"`, `records: { courses: N }`, `namespace: "app_akstack_lms_*"`)
+**Verified Endpoints:**
+- `GET https://supabase-supabase-8fc5f7-185-205-244-119.sslip.io/rest/v1/app_akstack_lms_courses` -> HTTP 200 OK (`GTM Engineering 90-Day Challenge`)
+- `GET https://lms.akstack.com/api/health` -> HTTP 200 OK (`service: "akstack-lms"`, `database: "connected"`)
+
 
 ---
 
