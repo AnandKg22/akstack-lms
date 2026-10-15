@@ -117,7 +117,10 @@ export default async function AdminCurriculumBuilderPage({
                   >
                     + Add Lesson
                   </Link>
-                  <form action={deleteModuleAction.bind(null, mod.id, courseId)}>
+                  <form action={async () => {
+                    "use server";
+                    await deleteModuleAction(mod.id, courseId);
+                  }}>
                     <button
                       type="submit"
                       className="text-xs text-red-400 hover:text-red-300 px-2 py-1 hover:bg-red-500/10 rounded transition"
@@ -161,7 +164,10 @@ export default async function AdminCurriculumBuilderPage({
                         >
                           Edit
                         </Link>
-                        <form action={deleteLessonAction.bind(null, lesson.id, courseId)}>
+                        <form action={async () => {
+                          "use server";
+                          await deleteLessonAction(lesson.id, courseId);
+                        }}>
                           <button
                             type="submit"
                             className="text-xs text-zinc-500 hover:text-red-400 p-1 transition"
