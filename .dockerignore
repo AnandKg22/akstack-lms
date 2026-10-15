@@ -1,0 +1,12 @@
+node_modules
+.next
+.git
+.gitignore
+.env*.local
+README.md
+*.test.ts
+tests
+supabase
+memory
+docs
+.DS_Store
