@@ -18,7 +18,10 @@
 - **Access Control:** Per-course entitlement validation in both database RLS and Next.js Server Components.
 - **Curriculum Hierarchy:** Course $\rightarrow$ Modules/Chapters $\rightarrow$ Lessons with order indices.
 - **Migration Engine:** Automated idempotent script (`scripts/migrate-curriculum.ts`) targeting `app_akstack_lms_*` without data loss or duplication.
+- **GitHub Repository:** `https://github.com/AnandKg22/akstack-lms.git` (Pushed to `main`)
+- **Live Database Telemetry:** 1 course, 9 modules, 84 lessons active in `public.app_akstack_lms_*`
 - **Telemetry:** Real-time lesson progress tracking (`app_akstack_lms_lesson_progress`) with completion percentages and access timestamps.
+
 
 
 ## Milestones & Status
