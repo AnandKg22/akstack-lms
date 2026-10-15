@@ -170,6 +170,22 @@ async function main() {
         break;
       }
 
+      case 'update-build-type': {
+        const [appId, buildType = 'dockerfile', dockerfile = 'Dockerfile'] = args;
+        if (!appId) {
+          console.error("Usage: node dokploy-manager.js update-build-type <appId> [buildType] [dockerfile]");
+          process.exit(1);
+        }
+        console.log(`Updating application ${appId} buildType to "${buildType}"...`);
+        const result = await apiRequest('application.update', 'POST', {
+          applicationId: appId,
+          buildType: buildType,
+          dockerfile: dockerfile
+        });
+        console.log(`Application buildType updated successfully:`, result);
+        break;
+      }
+
       case 'deploy': {
         const [appId] = args;
         if (!appId) {

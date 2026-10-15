@@ -86,7 +86,7 @@ export default async function HomePage() {
           </div>
           <h1 className="text-4xl sm:text-6xl font-extrabold tracking-tight text-white mb-6">
             Architect, Deploy & Scale <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-300">
+            <span className="text-transparent bg-clip-text bg-linear-to-r from-emerald-400 to-teal-300">
               Enterprise AI & GTM Systems
             </span>
           </h1>
